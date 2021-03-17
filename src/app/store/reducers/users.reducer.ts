@@ -3,14 +3,14 @@ import { User } from 'src/app/model/user.model';
 import { loadUsers, loadUsersError, loadUsersSuccess } from '../actions'; 
 
 export interface UsersState {
-    usersR  : User[];
+    users  : User[];
     loaded : boolean;
     loading: boolean;
     error  : any; 
 }
 
 export const usersInitialState: UsersState = {
-    usersR  : [],
+    users  : [],
     loaded : false,
     loading: false,
     error  : null 
@@ -19,11 +19,11 @@ export const usersInitialState: UsersState = {
 const _usersReducer = createReducer(usersInitialState,
     on(loadUsers,        state => ({ ...state, loading: true})),
     
-    on(loadUsersSuccess, (state, {usersR}) => ({ 
+    on(loadUsersSuccess, (state, {users}) => ({ 
         ...state, 
         loading: false,
         loaded: true,
-        users: [...usersR],
+        users: [...users],
         error: null
     })),
 
