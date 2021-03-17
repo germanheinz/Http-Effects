@@ -27,3 +27,13 @@
   .spacer {
     flex: 1;
   }
+  a .iconHeader{
+    margin-right: 8px;
+    margin-left: 8px;
+    color: #fff;
+    font-size: 20px;
+  }
+  a {
+    text-decoration: none;
+    padding-left: 10px;
+  }
