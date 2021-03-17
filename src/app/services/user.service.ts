@@ -21,4 +21,15 @@ export class UserService {
 
   }
 
+  getUser(id: string){
+    return this.http.get(`https://reqres.in/api/users/${id}`)
+    .pipe(
+      map( resp => {
+        console.log(resp['data']);
+        return resp['data'];
+      })
+    )
+
+  }
+
 }
