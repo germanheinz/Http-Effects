@@ -1,0 +1,13 @@
+.card{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+@media (min-width: 576px){
+    .card-group >.card {
+        flex: 1 0 24%;
+        margin-bottom: 0;
+    }
+}
+img{
+    height: -webkit-fill-available;
+}
